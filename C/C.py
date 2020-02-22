@@ -16,6 +16,17 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('C', num_list)
+N = int(input())
+X_list = [int(item) for item in input().split()]
+res = 1000000
+next_res = 10000000
+
+for j in range(100):
+    res = min(res, next_res)
+    next_res = 0
+    for i in range(N):
+        next_res += (X_list[i] - j)**2
+
+print(res)
+
 

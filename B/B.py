@@ -16,6 +16,14 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('B', num_list)
+N, K = [int(item) for item in input().split()]
+
+res = 0
+
+while N >= K:
+    N = N//K
+    res += 1
+
+print(res+1)
+
 

@@ -16,6 +16,11 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('A', num_list)
+N, R= [int(item) for item in input().split()]
 
+if N >= 10:
+    ans = R
+else:
+    ans = 100 * (10 - N) + R
+
+print(ans)
